@@ -1,0 +1,302 @@
+2023-04-22 21:26:11.397 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-22 21:26:11.416 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-22 21:26:11.416 +02:00 [INF] Hosting environment: Development
+2023-04-22 21:26:11.417 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-22 21:26:12.024 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-22 21:26:12.136 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 112.9922ms
+2023-04-22 21:26:12.141 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui-bundle.js - -
+2023-04-22 21:26:12.141 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui-standalone-preset.js - -
+2023-04-22 21:26:12.142 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui.css - -
+2023-04-22 21:26:12.158 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-04-22 21:26:12.158 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-04-22 21:26:12.158 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-04-22 21:26:12.160 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui.css - - - 200 143943 text/css 17.3110ms
+2023-04-22 21:26:12.160 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 18.2940ms
+2023-04-22 21:26:12.160 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 18.2705ms
+2023-04-22 21:26:12.246 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-22 21:26:12.254 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/favicon-32x32.png - -
+2023-04-22 21:26:12.254 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-04-22 21:26:12.254 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/favicon-32x32.png - - - 200 628 image/png 0.3459ms
+2023-04-22 21:26:12.316 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 69.6605ms
+2023-04-22 21:27:08.847 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 162
+2023-04-22 21:27:08.856 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-22 21:27:08.862 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:27:08.891 +02:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] CreateVilla(MagicVilla_WebAPI.Models.DTOs.VillaDTO) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-22 21:27:09.684 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[@__ToLower_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Amenity", v."CreatedDate", v."Details", v."ImageUrl", v."Name", v."Occupancy", v."Rate", v."Sqft", v."UpdatedDate"
+FROM "Villas" AS v
+WHERE lower(v."Name") = @__ToLower_0
+LIMIT 1
+2023-04-22 21:27:09.771 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Villas" ("Amenity", "CreatedDate", "Details", "ImageUrl", "Name", "Occupancy", "Rate", "Sqft", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2023-04-22 21:27:09.784 +02:00 [INF] Executing CreatedAtRouteResult, writing value of type 'MagicVilla_WebAPI.Models.DTOs.VillaDTO'.
+2023-04-22 21:27:09.814 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI) in 921.7ms
+2023-04-22 21:27:09.815 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:27:09.819 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 162 - 201 131 application/json;+charset=utf-8 971.6064ms
+2023-04-22 21:44:42.572 +02:00 [INF] Application is shutting down...
+2023-04-22 21:44:45.002 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-22 21:44:45.023 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-22 21:44:45.023 +02:00 [INF] Hosting environment: Development
+2023-04-22 21:44:45.023 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-22 21:44:45.508 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-22 21:44:45.654 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 146.5960ms
+2023-04-22 21:44:45.768 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-22 21:44:45.838 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 69.9195ms
+2023-04-22 21:45:47.037 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 194
+2023-04-22 21:45:47.047 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-22 21:45:47.054 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:45:47.083 +02:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] CreateVilla(MagicVilla_WebAPI.Models.DTOs.VillaDTO) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-22 21:45:47.877 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[@__ToLower_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Amenity", v."CreatedDate", v."Details", v."ImageUrl", v."Name", v."Occupancy", v."Rate", v."Sqft", v."UpdatedDate"
+FROM "Villas" AS v
+WHERE lower(v."Name") = @__ToLower_0
+LIMIT 1
+2023-04-22 21:45:47.963 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Villas" ("Amenity", "CreatedDate", "Details", "ImageUrl", "Name", "Occupancy", "Rate", "Sqft", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2023-04-22 21:45:47.978 +02:00 [INF] Executing CreatedAtRouteResult, writing value of type 'MagicVilla_WebAPI.Models.DTOs.VillaDTO'.
+2023-04-22 21:45:48.008 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI) in 923.7412ms
+2023-04-22 21:45:48.008 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:45:48.012 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 194 - 201 163 application/json;+charset=utf-8 975.0888ms
+2023-04-22 21:53:07.954 +02:00 [INF] Application is shutting down...
+eters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 21:50:29.483 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 21:50:29.493 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-22 21:50:29.501 +02:00 [INF] Applying migration '20230422195013_AddVillanew'.
+2023-04-22 21:53:12.768 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-22 21:53:12.788 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-22 21:53:12.788 +02:00 [INF] Hosting environment: Development
+2023-04-22 21:53:12.788 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-22 21:53:13.324 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-22 21:53:13.440 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 116.6692ms
+2023-04-22 21:53:13.500 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-22 21:53:13.571 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.5314ms
+2023-04-22 21:54:00.416 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 170
+2023-04-22 21:54:00.424 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-22 21:54:00.428 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:54:00.461 +02:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] CreateVilla(MagicVilla_WebAPI.Models.DTOs.VillaDTO) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-22 21:54:01.259 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@__ToLower_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Amenity", v."CreatedDate", v."Details", v."ImageUrl", v."Name", v."Occupancy", v."Rate", v."Sqft", v."UpdatedDate"
+FROM "Villas" AS v
+WHERE lower(v."Name") = @__ToLower_0
+LIMIT 1
+2023-04-22 21:54:01.353 +02:00 [ERR] Failed executing DbCommand (10ms) [Parameters=[@p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Villas" ("Amenity", "CreatedDate", "Details", "ImageUrl", "Name", "Occupancy", "Rate", "Sqft", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2023-04-22 21:54:01.365 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'MagicVilla_WebAPI.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 42804: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+
+POSITION: 136
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+    Hint: You will need to rewrite or cast the expression.
+    Position: 136
+    File: parse_target.c
+    Line: 595
+    Routine: transformAssignedExpr
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 42804: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+
+POSITION: 136
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+    Hint: You will need to rewrite or cast the expression.
+    Position: 136
+    File: parse_target.c
+    Line: 595
+    Routine: transformAssignedExpr
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2023-04-22 21:54:01.368 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI) in 904.3248ms
+2023-04-22 21:54:01.368 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 21:54:01.368 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 42804: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+
+POSITION: 136
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "CreatedDate" is of type timestamp with time zone but expression is of type integer
+    Hint: You will need to rewrite or cast the expression.
+    Position: 136
+    File: parse_target.c
+    Line: 595
+    Routine: transformAssignedExpr
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla(VillaDTO villaDto) in /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI/Controllers/VillaApiController.cs:line 91
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-22 21:54:01.377 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 170 - 500 - text/plain;+charset=utf-8 960.7855ms
+2023-04-22 21:57:01.709 +02:00 [INF] Application is shutting down...
+2023-04-22 21:57:22.841 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 21:57:22.865 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 21:57:22.874 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-22 21:57:22.882 +02:00 [INF] Applying migration '20230422195013_AddVillanew'.
+2023-04-22 22:00:09.091 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 22:00:09.109 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2023-04-22 22:00:09.118 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-04-22 22:00:09.126 +02:00 [INF] Applying migration '20230422195013_AddVillanew'.
+2023-04-22 22:00:09.141 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Villas" SET "CreatedDate" = TIMESTAMPTZ '2023-04-22 21:50:13.949375+02:00'
+WHERE "Id" = 1;
+2023-04-22 22:00:09.141 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230422195013_AddVillanew', '8.0.0-preview.3.23174.2');
+2023-04-22 22:00:09.143 +02:00 [INF] Applying migration '20230422195710_AddVillaUTC'.
+2023-04-22 22:00:09.145 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Villas" SET "CreatedDate" = TIMESTAMPTZ '2023-04-22 19:57:10.809097Z'
+WHERE "Id" = 1;
+2023-04-22 22:00:09.145 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230422195710_AddVillaUTC', '8.0.0-preview.3.23174.2');
+2023-04-22 22:00:14.288 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-22 22:00:14.308 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-22 22:00:14.308 +02:00 [INF] Hosting environment: Development
+2023-04-22 22:00:14.308 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-22 22:00:14.354 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-22 22:00:14.461 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 107.3973ms
+2023-04-22 22:00:14.516 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-22 22:00:14.582 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 65.4864ms
+2023-04-22 22:00:55.113 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 173
+2023-04-22 22:00:55.121 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-22 22:00:55.125 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 22:00:55.151 +02:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] CreateVilla(MagicVilla_WebAPI.Models.DTOs.VillaDTO) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-22 22:00:55.947 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[@__ToLower_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Amenity", v."CreatedDate", v."Details", v."ImageUrl", v."Name", v."Occupancy", v."Rate", v."Sqft", v."UpdatedDate"
+FROM "Villas" AS v
+WHERE lower(v."Name") = @__ToLower_0
+LIMIT 1
+2023-04-22 22:00:56.036 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Villas" ("Amenity", "CreatedDate", "Details", "ImageUrl", "Name", "Occupancy", "Rate", "Sqft", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2023-04-22 22:00:56.051 +02:00 [INF] Executing CreatedAtRouteResult, writing value of type 'MagicVilla_WebAPI.Models.DTOs.VillaDTO'.
+2023-04-22 22:00:56.081 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI) in 928.4992ms
+2023-04-22 22:00:56.082 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 22:00:56.085 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 173 - 201 142 application/json;+charset=utf-8 972.8680ms
+2023-04-22 22:01:30.718 +02:00 [INF] Application is shutting down...
+2023-04-22 22:02:55.154 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-22 22:02:55.192 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-22 22:02:55.193 +02:00 [INF] Hosting environment: Development
+2023-04-22 22:02:55.193 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-22 22:02:55.204 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-22 22:02:55.311 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 107.9365ms
+2023-04-22 22:02:55.370 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-22 22:02:55.434 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.4284ms
+2023-04-22 22:03:41.804 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 170
+2023-04-22 22:03:41.812 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-22 22:03:41.818 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 22:03:41.850 +02:00 [INF] Route matched with {action = "CreateVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] CreateVilla(MagicVilla_WebAPI.Models.DTOs.VillaDTO) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-22 22:03:42.637 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@__ToLower_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Amenity", v."CreatedDate", v."Details", v."ImageUrl", v."Name", v."Occupancy", v."Rate", v."Sqft", v."UpdatedDate"
+FROM "Villas" AS v
+WHERE lower(v."Name") = @__ToLower_0
+LIMIT 1
+2023-04-22 22:03:42.725 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Int32), @p6='?' (DbType = Double), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Villas" ("Amenity", "CreatedDate", "Details", "ImageUrl", "Name", "Occupancy", "Rate", "Sqft", "UpdatedDate")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)
+RETURNING "Id";
+2023-04-22 22:03:42.740 +02:00 [INF] Executing CreatedAtRouteResult, writing value of type 'MagicVilla_WebAPI.Models.DTOs.VillaDTO'.
+2023-04-22 22:03:42.771 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI) in 919.8201ms
+2023-04-22 22:03:42.771 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.CreateVilla (MagicVilla_WebAPI)'
+2023-04-22 22:03:42.775 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5088/api/VillaApi application/json-patch+json 170 - 201 139 application/json;+charset=utf-8 971.7484ms

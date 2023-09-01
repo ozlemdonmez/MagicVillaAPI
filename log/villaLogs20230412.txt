@@ -1,0 +1,131 @@
+2023-04-12 22:14:31.146 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-12 22:14:31.169 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-12 22:14:31.169 +02:00 [INF] Hosting environment: Development
+2023-04-12 22:14:31.169 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-12 22:14:31.214 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-12 22:14:31.289 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 76.2914ms
+2023-04-12 22:14:31.403 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-12 22:14:31.470 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 67.6576ms
+2023-04-12 22:14:45.172 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi - -
+2023-04-12 22:14:45.178 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-12 22:14:45.183 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:14:45.195 +02:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO]] GetVillas() on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:14:45.198 +02:00 [INF] Getting all villas..
+2023-04-12 22:14:45.203 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagicVilla_WebAPI.Models.DTOs.VillaDTO, MagicVilla_WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-12 22:14:45.285 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI) in 87.998ms
+2023-04-12 22:14:45.285 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:14:45.285 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi - - - 200 106 application/json;+charset=utf-8 113.5810ms
+2023-04-12 22:27:28.579 +02:00 [INF] Application is shutting down...
+2023-04-12 22:27:31.061 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-12 22:27:31.080 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-12 22:27:31.080 +02:00 [INF] Hosting environment: Development
+2023-04-12 22:27:31.080 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-12 22:27:31.655 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-12 22:27:31.726 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 72.3131ms
+2023-04-12 22:27:31.787 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-12 22:27:31.856 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 68.3345ms
+2023-04-12 22:27:35.557 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi - -
+2023-04-12 22:27:35.563 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-12 22:27:35.567 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:27:35.580 +02:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO]] GetVillas() on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:27:35.586 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI) in 2.4869ms
+2023-04-12 22:27:35.589 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:27:35.589 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MagicVilla_WebAPI.Logging.ILogging' while attempting to activate 'MagicVilla_WebAPI.Controllers.VillaApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-12 22:27:35.604 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi - - - 500 - text/plain;+charset=utf-8 47.4601ms
+2023-04-12 22:27:38.389 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi - -
+2023-04-12 22:27:38.389 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:27:38.389 +02:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO]] GetVillas() on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:27:38.390 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI) in 0.3235ms
+2023-04-12 22:27:38.390 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:27:38.390 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MagicVilla_WebAPI.Logging.ILogging' while attempting to activate 'MagicVilla_WebAPI.Controllers.VillaApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-12 22:27:38.392 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi - - - 500 - text/plain;+charset=utf-8 2.9644ms
+2023-04-12 22:28:07.708 +02:00 [INF] Application is shutting down...
+2023-04-12 22:28:08.608 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-12 22:28:08.627 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-12 22:28:08.627 +02:00 [INF] Hosting environment: Development
+2023-04-12 22:28:08.627 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-12 22:28:08.701 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-12 22:28:08.770 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 71.1685ms
+2023-04-12 22:28:08.828 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-12 22:28:08.893 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 64.6755ms
+2023-04-12 22:28:12.739 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi - -
+2023-04-12 22:28:12.744 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-12 22:28:12.749 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:28:12.761 +02:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO]] GetVillas() on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:28:12.769 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI) in 2.4188ms
+2023-04-12 22:28:12.771 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:28:12.772 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MagicVilla_WebAPI.Logging.ILogging' while attempting to activate 'MagicVilla_WebAPI.Controllers.VillaApiController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-04-12 22:28:12.785 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi - - - 500 - text/plain;+charset=utf-8 46.1362ms
+2023-04-12 22:34:02.548 +02:00 [INF] Application is shutting down...
+2023-04-12 22:34:04.045 +02:00 [INF] Now listening on: http://localhost:5088
+2023-04-12 22:34:04.066 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-04-12 22:34:04.066 +02:00 [INF] Hosting environment: Development
+2023-04-12 22:34:04.066 +02:00 [INF] Content root path: /Users/ozlemcigir/RiderProjects/MagicVilla/MagicVilla_WebAPI
+2023-04-12 22:34:04.158 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/index.html - -
+2023-04-12 22:34:04.239 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/index.html - - - 200 - text/html;charset=utf-8 82.1188ms
+2023-04-12 22:34:04.302 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - -
+2023-04-12 22:34:04.369 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 67.1223ms
+2023-04-12 22:34:09.040 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi - -
+2023-04-12 22:34:09.046 +02:00 [WRN] Failed to determine the https port for redirect.
+2023-04-12 22:34:09.051 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:34:09.064 +02:00 [INF] Route matched with {action = "GetVillas", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO]] GetVillas() on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:34:09.081 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MagicVilla_WebAPI.Models.DTOs.VillaDTO, MagicVilla_WebAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-04-12 22:34:09.163 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI) in 97.3511ms
+2023-04-12 22:34:09.164 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVillas (MagicVilla_WebAPI)'
+2023-04-12 22:34:09.164 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi - - - 200 106 application/json;+charset=utf-8 123.8296ms
+2023-04-12 22:34:25.433 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5088/api/VillaApi/0 - -
+2023-04-12 22:34:25.434 +02:00 [INF] Executing endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVilla (MagicVilla_WebAPI)'
+2023-04-12 22:34:25.456 +02:00 [INF] Route matched with {action = "GetVilla", controller = "VillaApi"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[MagicVilla_WebAPI.Models.DTOs.VillaDTO] GetVilla(Int32) on controller MagicVilla_WebAPI.Controllers.VillaApiController (MagicVilla_WebAPI).
+2023-04-12 22:34:25.471 +02:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-04-12 22:34:25.486 +02:00 [INF] Executed action MagicVilla_WebAPI.Controllers.VillaApiController.GetVilla (MagicVilla_WebAPI) in 25.1413ms
+2023-04-12 22:34:25.486 +02:00 [INF] Executed endpoint 'MagicVilla_WebAPI.Controllers.VillaApiController.GetVilla (MagicVilla_WebAPI)'
+2023-04-12 22:34:25.486 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5088/api/VillaApi/0 - - - 400 163 application/problem+json;+charset=utf-8 52.9501ms
+2023-04-12 22:38:50.312 +02:00 [INF] Application is shutting down...
